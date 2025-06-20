@@ -25,8 +25,10 @@ configure_file (
 ## Install ##
 #############
 
-install(DIRECTORY include/ DESTINATION include)
+install(DIRECTORY include/${PROJECT_NAME} DESTINATION include)
 
 install(DIRECTORY resources DESTINATION share/${PROJECT_NAME})
 
 ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_package()
